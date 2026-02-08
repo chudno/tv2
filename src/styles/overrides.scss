@@ -1,0 +1,29 @@
+.p-select-overlay {
+  --p-select-overlay-background: var(--color-white);
+  --p-select-overlay-border-radius: var(--rounded-xl);
+  --p-select-overlay-border-color: var(--color-gray-92);
+  margin-top: 5px;
+
+  padding: 12px;
+}
+
+.p-select-list {
+  --p-select-list-gap: 10px;
+}
+
+.p-select-option {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.p-popover {
+  --p-popover-background: var(--color-white);
+  --p-popover-border-radius: var(--rounded-xl);
+  --p-popover-border-color: var(--color-gray-92);
+
+  max-width: 360px;
+
+  &-content {
+    --p-popover-content-padding: 12px 16px;
+  }
+}
