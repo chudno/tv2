@@ -1,37 +1,45 @@
 <script setup lang="ts">
 import UiSection from '@/components/UiSection/UiSection.vue';
-import UiButtonBack from '@/components/UiButtonBack/UiButtonBack.vue';
 import UiPaymentOption from '@/components/UiPaymentOption/UiPaymentOption.vue';
 import UiPayList from '@/components/UiPayList/UiPayList.vue';
 
-import type { PayLinkProps } from '@/components/UiPayLink/UiPayLink.vue';
+import UiButtonBack from '@/components/UiButtonBack/UiButtonBack.vue';
+
 import UiTooltip from '@/components/UiTooltip/UiTooltip.vue';
 import UiTooltipContent from '@/components/UiTooltipContent/UiTooltipContent.vue';
 
+import sber from '@/assets/icons/sber.svg';
+import otp from '@/assets/icons/otp.svg';
+import vd from '@/assets/icons/vd.svg';
+import creditEuropa from '@/assets/icons/credit-europa.svg';
+
+
+import type { PayLinkProps } from '@/components/UiPayLink/UiPayLink.vue';
+
 const paymentsData: PayLinkProps[] = [
   {
-    svgUrl: './src/assets/icons/sber.svg',
+    svgUrl: sber,
     description: 'Заполните короткую анкету, получите одобрение и подпишите онлайн за 10 минут',
     mode: 'approval',
     url: '/installment-plan',
     approvalMarker: true,
   },
   {
-    svgUrl: './src/assets/icons/otp.svg',
+    svgUrl: otp,
     description: 'Заполните короткую анкету, получите одобрение и подпишите онлайн за 10 минут',
     mode: 'approval',
     url: '/installment-plan',
     approvalMarker: true,
   },
   {
-    svgUrl: './src/assets/icons/vd.svg',
+    svgUrl: vd,
     description: 'Заполните короткую анкету, получите одобрение и подпишите онлайн за 10 минут',
     mode: 'approval',
     url: '/installment-plan',
     approvalMarker: true,
   },
   {
-    svgUrl: './src/assets/icons/credit-europa.svg',
+    svgUrl: creditEuropa,
     description: 'Заполните короткую анкету, получите одобрение и подпишите онлайн за 10 минут',
     mode: 'approval',
     url: '/installment-plan',

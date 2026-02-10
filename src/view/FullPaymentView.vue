@@ -2,18 +2,20 @@
 import UiSection from '@/components/UiSection/UiSection.vue';
 import UiButtonBack from '@/components/UiButtonBack/UiButtonBack.vue';
 import UiPayList from '@/components/UiPayList/UiPayList.vue';
+import rublesIcon from '@/assets/icons/rubles.svg';
+import foreignCurrency from '@/assets/icons/foreign-currency.svg';
 
 import type { PayLinkProps } from '@/components/UiPayLink/UiPayLink.vue';
 
 const paymentsData: PayLinkProps[] = [
   {
-    svgUrl: './src/assets/icons/rubles.svg',
+    svgUrl: rublesIcon,
     description: 'Оплата картой российского банка в Рублях, ЮMoney, SberPay, СБП',
     mode: 'currency',
     url: '/choose-payment',
   },
   {
-    svgUrl: './src/assets/icons/foreign-currency.svg',
+    svgUrl: foreignCurrency,
     description: 'Оплата картой зарубежного банка в USD, EUR и других иностранных валютах',
     mode: 'currency',
     url: '#',

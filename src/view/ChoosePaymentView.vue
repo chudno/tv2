@@ -1,26 +1,32 @@
 <script setup lang="ts">
 import UiSection from '@/components/UiSection/UiSection.vue';
+
 import UiPayList from '@/components/UiPayList/UiPayList.vue';
-import UiButtonBack from '@/components/UiButtonBack/UiButtonBack.vue';
 import UiPaymentOption from '@/components/UiPaymentOption/UiPaymentOption.vue';
+
+import UiButtonBack from '@/components/UiButtonBack/UiButtonBack.vue';
+
+import terPay from '@/assets/icons/ter-pay.svg';
+import sberPay from '@/assets/icons/sber-pay.svg';
+import uMoneyPay from '@/assets/icons/u-money-pay.svg';
 
 import type { PayLinkProps } from '@/components/UiPayLink/UiPayLink.vue';
 
 const paymentsData: PayLinkProps[] = [
   {
-    svgUrl: './src/assets/icons/ter-pay.svg',
+    svgUrl: terPay,
     description: 'Совершите единоразовый платеж с помощью банковской карты QR-кода или СБП',
     mode: 'bank',
     url: '#',
   },
   {
-    svgUrl: './src/assets/icons/sber-pay.svg',
+    svgUrl: sberPay,
     description: 'Быстрый и безопасный способ приёма платежей с помощью приложения Сбербанка',
     mode: 'bank',
     url: '#',
   },
   {
-    svgUrl: './src/assets/icons/u-money-pay.svg',
+    svgUrl: uMoneyPay,
     description: 'Быстрый и безопасный способ приёма платежей с помощью приложения Сбербанка',
     mode: 'bank',
     url: '#',
