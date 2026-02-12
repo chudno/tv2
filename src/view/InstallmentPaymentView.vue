@@ -47,30 +47,6 @@ const paymentsData: PayLinkProps[] = [
   },
 ];
 
-const paymentOptions = [
-  {
-    description:
-      'Хочу получать напоминания о предстоящих платежах для спокойствия и оплаты без просрочек (200 руб/мес)',
-    tooltipContent: `
-      <p>Стоимость услуги СМС-информирования составляет 200 рублей в месяц. Итоговая сумма услуги будут добавлена к общей стоимости покупки.</p>
-    `,
-    tooltipFooter: `<a href="#">Подробнее про СМС-информирование</a>`,
-  },
-  {
-    description:
-      'Хочу оформить страховку на случай, если не смогу найти работу после окончания обучения (2500 руб)',
-    tooltipContent: `
-      <p>Стоимость страховки составляет 2 500 рублей и будет добавлена к общей стоимости.</p>
-      <p>
-        <strong>Внимание!</strong>
-        Сейчас страховку можно оформить
-        <a href="#">со скидкой 50%</a>.
-        После завершения оплаты приобрести страховку будет нельзя.
-      </p>
-    `,
-    tooltipFooter: `<a href="#">Подробнее про страховку</a>`,
-  },
-];
 
 const sectionTitle = `Рассрочка без первого взноса от надежных банков и брокеров`;
 const sectionSubtitle =
@@ -86,17 +62,6 @@ const titleId = 'installment-payment-view-title';
     :subtitle="sectionSubtitle"
   >
     <ui-pay-list :arr-name="paymentsData" />
-    <ui-payment-option
-      v-for="(option, index) in paymentOptions"
-      :key="index"
-      :description="option.description"
-    >
-      <template #tooltip>
-        <ui-tooltip>
-          <ui-tooltip-content :content="option.tooltipContent" :footer="option.tooltipFooter" />
-        </ui-tooltip>
-      </template>
-    </ui-payment-option>
     <ui-button-back />
   </ui-section>
 </template>

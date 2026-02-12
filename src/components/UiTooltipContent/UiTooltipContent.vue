@@ -53,7 +53,7 @@ const props = defineProps<TooltipContentProps>();
 
     a {
       align-self: end;
-      color: var(--color-violet);
+      color: var(--color-accent-alt);
       font-size: 14px;
       line-height: 1.5;
 
