@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import UiIcon from '@/components/UiIcon/UiIcon.vue';
 import UiTooltip from '@/components/UiTooltip/UiTooltip.vue';
 import UiTooltipContent from '@/components/UiTooltipContent/UiTooltipContent.vue';
 
@@ -31,16 +30,21 @@ const props = withDefaults(defineProps<PayLinkProps>(), {
       <span class="ui-pay-link__approval-marker" v-if="props.approvalMarker">
         {{ `ТОП-${props.approvalTop} по одобрениям` }}
       </span>
-      <img
-        class="ui-pay-link__icon"
-        v-if="props.svgUrl"
-        :src="props.svgUrl"
-        alt=""
-        loading="lazy"
-      />
-      <h3 class="ui-pay-link__title" v-if="props.title">
-        {{ props.title }}
-      </h3>
+      <div
+        class="ui-pay-link__inner"
+        :class="{ ['ui-pay-link__inner--contents']: props.mode !== 'base' }"
+      >
+        <img
+          class="ui-pay-link__icon"
+          v-if="props.svgUrl"
+          :src="props.svgUrl"
+          alt=""
+          loading="lazy"
+        />
+        <h3 class="ui-pay-link__title" v-if="props.title">
+          {{ props.title }}
+        </h3>
+      </div>
       <p class="ui-pay-link__description" v-html="props.description"></p>
     </router-link>
     <ui-tooltip class="ui-pay-link__clue" v-if="props.clue">
@@ -150,6 +154,22 @@ const props = withDefaults(defineProps<PayLinkProps>(), {
       .ui-pay-link__description {
         color: var(--color-black);
       }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    @include mobile {
+      align-items: start;
+      row-gap: 8px;
+      flex-direction: column;
+    }
+
+    &--contents {
+      display: contents;
     }
   }
 
